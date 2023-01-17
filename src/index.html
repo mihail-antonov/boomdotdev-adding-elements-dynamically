@@ -10,9 +10,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div class="main">
-      <div class="emoji mb-6">💣🤯💥</div>
-      <button class="button">Boom?</button>
-    </div>
+  <div class="main">
+    <div class="emoji mb-6">💣🤯💥</div>
+    <button class="button">Boom?</button>
+  </div>
+
+  <script type="application/javascript">
+    document.body.addEventListener('click', function () {
+
+      let article = document.createElement('article');
+      article.classList.add('message');
+      article.textContent += 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent risus eros, ultricies quis convallis non, congue in nibh. In porttitor, nunc in aliquam fermentum, lorem elit suscipit diam, vel facilisis lorem velit vel mi.';
+
+      let secondArticle = article.cloneNode(true);
+      let thirdArticle = article.cloneNode(true);
+      let fourthArticle = article.cloneNode(true);
+      let fifthArticle = article.cloneNode(true);
+
+      document.body.append(article, secondArticle, thirdArticle, fourthArticle, fifthArticle);
+    });
+  </script>
   </body>
 </html>
